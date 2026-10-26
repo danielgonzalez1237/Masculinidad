@@ -72,7 +72,13 @@ voceros famosos. Claude escribió `08-decisiones-y-term-sheet.md` (decisiones, n
 nunca decir "CDT", excedente escalonado en vez de 50/50 plano, modelo de opex, marca y
 vocería realista a 24 a 36 meses, term sheet v1) y `09-memorando-fiduciarias.md`
 (presentación, 15 preguntas, criterios de selección), y lanzó un agente para comparar
-fiduciarias y administradoras.
+fiduciarias y administradoras. Tras la réplica de Daniel sobre el carry (incentivos y
+Cardone sin retorno preferente), Claude comparó numéricamente cinco esquemas y propuso
+un escalonado 70/30, 60/40, 50/50 (sección 2.2 bis del `08`). El comparativo de
+fiduciarias quedó en `10-fiduciarias-comparativo.md`: ranking para contactar primero
+Aval Fiduciaria (equipo Fiduoccidente), Alianza (Medellín, con reserva por tres
+condenas recientes), Fiducentral (filial del IDEA, sin condenas), Progresión (boutique)
+y Acción (solo etapa 0); Fiduciaria Bancolombia exige 40.000 millones para FCP.
 
 **Decisiones (de Daniel, pendientes de Hernán y Julián):** arquitectura de tres capas;
 fiducia → FIC → listado; 7+1+1 años; compromisos con llamados; 12 % preferente; set-up
@@ -83,7 +89,8 @@ escalonado); sombreros separados de socio e inversionista.
 archivos se publicaron en la rama con la herramienta de GitHub de la sesión.
 
 **Próximo paso:** Hernán y Julián validan las decisiones y el term sheet; Daniel
-cotiza opex y set-up; se agendan las reuniones con fiduciarias.
+cotiza opex y set-up; se agendan reuniones con Aval, Alianza y Fiducentral usando el
+memorando `09` y las 15 preguntas del `10`.
 
 ---
 

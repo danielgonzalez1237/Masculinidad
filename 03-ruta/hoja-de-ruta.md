@@ -73,8 +73,8 @@ entrevistas y propone ajustes a la visión.
 - [x] Memorando y preguntas para fiduciarias (`09-memorando-fiduciarias.md`)
 - [ ] Hernán y Julián validan las 7 decisiones y el term sheet; deciden el reparto del excedente
 - [ ] Daniel arma presupuesto real de opex y set-up con cotizaciones
-- [ ] Informe comparativo de fiduciarias (agente en curso)
+- [x] Informe comparativo de fiduciarias (`10-fiduciarias-comparativo.md`): ranking Aval, Alianza, Fiducentral, Progresión, Acción
 - [ ] Hernán y Julián consiguen los 5 datos del lote (uso del suelo, agua, precio, cotización de obra, comparables)
 - [ ] Plan de negocios v1 (gestora, proyecto piloto, cronograma)
 - [ ] Memorando para abogado financiero en Medellín
-- [ ] Reuniones exploratorias con 2 o 3 fiduciarias
+- [ ] Reuniones exploratorias con Aval (equipo Fiduoccidente), Alianza Medellín y Fiducentral, con el memorando `09`
