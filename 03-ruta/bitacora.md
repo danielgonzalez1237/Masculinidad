@@ -48,13 +48,27 @@ en suburbano frente a 1,8 ha del lote, agua, POT en revisión, constructora como
 relacionada, modelo de servilleta con tres escenarios) y lanzó un agente sobre
 tokenización y cripto en Colombia.
 
+**Tercera ronda (misma sesión):** llegó el informe de tokenización y cripto
+(`06-tokenizacion-y-cripto.md`): no hay ley de criptoactivos ni régimen de
+tokenización en Colombia; las fiduciarias no pueden recibir cripto; el modelo "emisor
+extranjero de tokens + operadora colombiana vendiendo a residentes" es el patrón del
+caso Lazza Capital (Medellín, 2024) y se descarta; la tokenización queda como opción
+futura vía sandbox o representación digital de una participación ya regulada. Daniel
+aclaró que no busca que Claude evalúe la viabilidad del proyecto sino que esquematice
+la arquitectura del vehículo como fondo y el método de levantamiento de capital, con
+base en el benchmark. Claude escribió `07-arquitectura-del-fondo.md` (cuatro funciones
+separadas, mapa de piezas, ciclo de vida, compartimentos, flujo del dinero, cascada de
+reparto, reporte, liquidez, método de levantamiento por círculos, gobierno, comparación
+con referentes y siete decisiones pendientes).
+
 **Decisiones:** ninguna todavía. Recomendación de Claude: Colombia, fiducia con
 derechos fiduciarios a riesgo para el primer proyecto, FIC inmobiliario para escalar.
 
-**Pendiente técnico:** el push al remoto fue bloqueado por permisos de la sesión;
-los commits quedaron locales hasta que Daniel lo autorice.
+**Nota técnica:** el push por git fue bloqueado por permisos de la sesión; los
+archivos se publicaron en la rama con la herramienta de GitHub de la sesión.
 
-**Próximo paso:** Daniel responde las preguntas de la sección 9 del brainstorm.
+**Próximo paso:** los socios responden las siete decisiones de la sección 12 de
+`07-arquitectura-del-fondo.md`.
 
 ---
 

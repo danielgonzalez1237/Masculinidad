@@ -67,7 +67,9 @@ entrevistas y propone ajustes a la visión.
 - [x] Lluvia de ideas v1 y preguntas (`03-brainstorm-y-preguntas.md`)
 - [x] Daniel responde las preguntas clave (socios, inversionistas, lote, exterior)
 - [x] Registro de socios y roles (`04-socios-y-roles.md`) y análisis del piloto (`05-piloto-llanogrande.md`)
-- [ ] Informe sobre tokenización y aportes en USDT (`06-tokenizacion-y-cripto.md`, agente en curso)
+- [x] Informe sobre tokenización y aportes en USDT (`06-tokenizacion-y-cripto.md`)
+- [x] Arquitectura operativa del vehículo como fondo (`07-arquitectura-del-fondo.md`)
+- [ ] Los socios responden las 7 decisiones de la sección 12 de la arquitectura
 - [ ] Hernán y Julián consiguen los 5 datos del lote (uso del suelo, agua, precio, cotización de obra, comparables)
 - [ ] Plan de negocios v1 (gestora, proyecto piloto, cronograma)
 - [ ] Memorando para abogado financiero en Medellín
