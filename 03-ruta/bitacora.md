@@ -61,14 +61,29 @@ separadas, mapa de piezas, ciclo de vida, compartimentos, flujo del dinero, casc
 reparto, reporte, liquidez, método de levantamiento por círculos, gobierno, comparación
 con referentes y siete decisiones pendientes).
 
-**Decisiones:** ninguna todavía. Recomendación de Claude: Colombia, fiducia con
-derechos fiduciarios a riesgo para el primer proyecto, FIC inmobiliario para escalar.
+**Cuarta ronda (misma sesión):** Daniel respondió las siete decisiones: sí a la
+arquitectura y al camino fiducia, FIC, listado; 7+1+1 años y solo Desarrollo al inicio;
+compromisos con llamados; 12 % anual al aportante ("como un CDT competitivo"), set-up
+fee y anual ajustado al opex, y reparto del excedente 50/50; los tres aportan por igual
+al set-up y quien invierta en el fondo lo hace con reglas de público; no conocen
+fiduciarias, buscar la más amigable; sin marca ni vocero todavía, arranque con
+*friends and family* y meta de marca, contenido y emisión en bolsa en 12 meses con
+voceros famosos. Claude escribió `08-decisiones-y-term-sheet.md` (decisiones, notas:
+nunca decir "CDT", excedente escalonado en vez de 50/50 plano, modelo de opex, marca y
+vocería realista a 24 a 36 meses, term sheet v1) y `09-memorando-fiduciarias.md`
+(presentación, 15 preguntas, criterios de selección), y lanzó un agente para comparar
+fiduciarias y administradoras.
+
+**Decisiones (de Daniel, pendientes de Hernán y Julián):** arquitectura de tres capas;
+fiducia → FIC → listado; 7+1+1 años; compromisos con llamados; 12 % preferente; set-up
+1 % y anual ajustado al opex; reparto del excedente por definir (Daniel 50/50, Claude
+escalonado); sombreros separados de socio e inversionista.
 
 **Nota técnica:** el push por git fue bloqueado por permisos de la sesión; los
 archivos se publicaron en la rama con la herramienta de GitHub de la sesión.
 
-**Próximo paso:** los socios responden las siete decisiones de la sección 12 de
-`07-arquitectura-del-fondo.md`.
+**Próximo paso:** Hernán y Julián validan las decisiones y el term sheet; Daniel
+cotiza opex y set-up; se agendan las reuniones con fiduciarias.
 
 ---
 

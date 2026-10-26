@@ -69,7 +69,11 @@ entrevistas y propone ajustes a la visión.
 - [x] Registro de socios y roles (`04-socios-y-roles.md`) y análisis del piloto (`05-piloto-llanogrande.md`)
 - [x] Informe sobre tokenización y aportes en USDT (`06-tokenizacion-y-cripto.md`)
 - [x] Arquitectura operativa del vehículo como fondo (`07-arquitectura-del-fondo.md`)
-- [ ] Los socios responden las 7 decisiones de la sección 12 de la arquitectura
+- [x] Daniel responde las 7 decisiones; registradas en `08-decisiones-y-term-sheet.md` con term sheet v1
+- [x] Memorando y preguntas para fiduciarias (`09-memorando-fiduciarias.md`)
+- [ ] Hernán y Julián validan las 7 decisiones y el term sheet; deciden el reparto del excedente
+- [ ] Daniel arma presupuesto real de opex y set-up con cotizaciones
+- [ ] Informe comparativo de fiduciarias (agente en curso)
 - [ ] Hernán y Julián consiguen los 5 datos del lote (uso del suelo, agua, precio, cotización de obra, comparables)
 - [ ] Plan de negocios v1 (gestora, proyecto piloto, cronograma)
 - [ ] Memorando para abogado financiero en Medellín
