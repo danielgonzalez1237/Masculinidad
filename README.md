@@ -36,6 +36,14 @@ Daniel para que las pegue en el chat, o pedirle que lo agregue como colaborador.
 | `02-proyecto/oferta-y-negocio.md` | Formatos posibles y cómo se sostiene económicamente | Los dos + Claude |
 | `03-ruta/hoja-de-ruta.md` | Fases del proyecto y en qué punto vamos | Claude lo actualiza |
 | `03-ruta/bitacora.md` | Registro de sesiones y decisiones | Claude lo actualiza |
+| `04-fondo-inmobiliario/` | Segundo negocio (vehículo de inversión inmobiliaria en el Oriente Antioqueño): idea original, marco jurídico, benchmark y lluvia de ideas | Daniel + Claude |
+
+## Segundo negocio: vehículo inmobiliario
+
+Desde octubre de 2026 este repositorio también guarda la memoria de otra idea de
+Daniel, con Julián y un tercer socio: un vehículo para invertir en real estate en el
+Oriente Antioqueño. Vive en `04-fondo-inmobiliario/` y tiene su propia ruta; para
+retomarla basta decir *"Lee la carpeta 04 y sigamos con el fondo inmobiliario"*.
 
 ## Por dónde empezar
 

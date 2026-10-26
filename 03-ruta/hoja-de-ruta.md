@@ -1,7 +1,7 @@
 # Hoja de ruta
 
 **Fase actual:** 0 — Conocernos y alinear
-**Última actualización:** 2026-10-08
+**Última actualización:** 2026-10-26
 
 Las semanas son orientativas; lo importante es cerrar cada fase antes de pasar a la
 siguiente.
@@ -54,3 +54,21 @@ entrevistas y propone ajustes a la visión.
 - Redactar documentos: identidad, programas, guiones, textos de convocatoria.
 - Analizar entrevistas e investigar referentes.
 - Proponer estrategia de contenido y de negocio, con recomendaciones claras.
+
+---
+
+## Proyecto paralelo: vehículo de inversión inmobiliaria (`04-fondo-inmobiliario/`)
+
+**Fase actual:** exploración (lluvia de ideas y marco jurídico).
+
+- [x] Registrar la idea original de Daniel (`00-idea-original.md`)
+- [x] Informe de marco jurídico colombiano (`01-marco-juridico.md`)
+- [x] Benchmark de vehículos (`02-benchmark.md`)
+- [x] Lluvia de ideas v1 y preguntas (`03-brainstorm-y-preguntas.md`)
+- [x] Daniel responde las preguntas clave (socios, inversionistas, lote, exterior)
+- [x] Registro de socios y roles (`04-socios-y-roles.md`) y análisis del piloto (`05-piloto-llanogrande.md`)
+- [ ] Informe sobre tokenización y aportes en USDT (`06-tokenizacion-y-cripto.md`, agente en curso)
+- [ ] Hernán y Julián consiguen los 5 datos del lote (uso del suelo, agua, precio, cotización de obra, comparables)
+- [ ] Plan de negocios v1 (gestora, proyecto piloto, cronograma)
+- [ ] Memorando para abogado financiero en Medellín
+- [ ] Reuniones exploratorias con 2 o 3 fiduciarias
