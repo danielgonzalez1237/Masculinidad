@@ -61,6 +61,56 @@ Así el inversionista nunca gana menos del 24 % anual antes de que la gestora ll
 la mitad. Es defendible ante cualquiera y premia la ejecución. Si los socios insisten en
 un número único, mi tope recomendado es **30 %** en el primer fondo.
 
+### 2.2 bis. Réplica de Daniel y comparación con números
+
+**Lo que dijo Daniel:** "Si no gano como *performance*, entonces encarecería el aporte
+del lote, la construcción la aportaría a mayor costo y con algo por detrás de negocio
+con aquella empresa, etc. Por eso prefiero ser transparente en el margen. En Colombia no
+sé cómo operan, pero lo de Cardone al 35 % habla mucho; pero ¿él te adelanta un 12 % al
+año? No creo."
+
+**Claude le da la razón en dos puntos:**
+1. **El argumento de incentivos es el argumento correcto a favor de un carry alto.** Un
+   gestor mal pagado por desempeño busca el margen en el lote, en la obra o en la
+   promotora, y eso es peor para el inversionista que un carry alto y declarado. La
+   transparencia del margen es un valor, no un costo.
+2. **Cardone no da retorno preferente** (verificado): su 6 % a 8 % es "flujo objetivo",
+   no un *hurdle*; se queda con el 35 % desde el primer peso de utilidad. La estructura
+   de Daniel (12 % preferente y después 50/50) es **más generosa con el inversionista
+   que la de Cardone** en los escenarios medios y parecida en los buenos.
+
+**Los números, sobre el piloto (12.000 millones, tres años, cifras en millones de COP):**
+
+| Escenario | Utilidad del proyecto | A. Daniel: 12 % pref + 50/50 | B. Escalonado 80/20, 65/35, 50/50 | B'. Escalonado 70/30, 60/40, 50/50 | C. Cardone: sin pref, 65/35 | D. Fiducentral: 12 % pref + 15 % |
+|---|---|---|---|---|---|---|
+| Base | 3.400 | Inv. 3.400 (8,7 % EA) · Gestora 0 | Inv. 3.400 · Gestora 0 | Inv. 3.400 · Gestora 0 | Inv. 2.210 (5,8 % EA) · Gestora 1.190 | Inv. 3.400 · Gestora 0 |
+| Bueno (inv. llega a 18 % EA sin carry) | 7.716 | Inv. 6.288 (15,4 % EA) · Gestora 1.428 | Inv. 7.145 (17,0 % EA) · Gestora 571 | Inv. 6.859 (16,4 % EA) · Gestora 857 | Inv. 5.015 (12,4 % EA) · Gestora 2.701 | Inv. 7.288 (17,3 % EA) · Gestora 428 |
+| Óptimo | 14.400 | Inv. 9.630 (21,7 % EA) · Gestora 4.770 | Inv. 11.431 (25,0 % EA) · Gestora 2.969 | Inv. 10.973 (24,2 % EA) · Gestora 3.427 | Inv. 9.360 (21,0 % EA) · Gestora 5.040 | Inv. 12.969 (24,6 % EA) · Gestora 1.431 |
+| Pérdida | negativa | Inv. pierde · Gestora 0 | igual | igual | igual | igual |
+
+Lectura:
+- En el escenario base, con tasa preferente del 12 % compuesta, **nadie cobra carry** en
+  A, B, B' ni D. Ahí la gestora vive de set-up, anual y gerencia de proyecto.
+- En el escenario óptimo, A deja al inversionista casi igual que Cardone (21,7 % frente
+  a 21,0 %). Es defendible frente a Cardone; frente a las referencias colombianas
+  (10 % a 15 %) es caro, y eso pesa cuando se pase a la etapa FIC con inversionistas
+  que comparan.
+- B' (70/30, 60/40, 50/50) es el punto medio: la gestora cobra el 72 % de lo que
+  cobraría con A en el óptimo, el inversionista nunca baja de 24 % antes del 50/50, y la
+  portada del term sheet dice "30 %", no "50 %".
+
+**Recomendación de Claude (una sola):** B' para el primer fondo, con el compromiso
+escrito de que el carry es la única utilidad de la gestora y que lote, obra y ventas
+se contratan a precio de mercado con avalúo y cotizaciones externas. Eso convierte el
+argumento de Daniel ("prefiero ser transparente en el margen") en la primera página
+del documento para inversionistas. Si los tres prefieren A, es legal y defendible
+frente a Cardone; solo hay que saber que costará inversionistas sofisticados en la
+etapa FIC.
+
+Nota técnica: los retornos efectivos anuales son sobre tres años con el capital
+aportado completo desde el inicio; con llamados de capital el retorno del inversionista
+sube un poco porque el dinero entra más tarde.
+
 ### 2.3 El opex: cuánto cuesta operar la gestora (hipótesis para calibrar)
 
 | Rubro | Mensual (COP millones) | Comentario |
@@ -140,7 +190,7 @@ cumpla con su propio dinero y bajo reglas de público.
 | **Gerencia de proyecto** | 3 % a 5 % de costos directos de cada proyecto, pagado por el patrimonio autónomo del proyecto a la gestora, con presupuesto aprobado por el comité. |
 | **Comisión fiduciaria** | La que negocie la gestora con la administradora (hipótesis: 0,3 % a 0,6 % anual más mínimos mensuales). A cargo del fondo. |
 | **Gastos del fondo** | Avalúos, auditoría, revisoría, legales del fondo, impuestos del patrimonio: a cargo del fondo. Opex de la gestora: a cargo de la gestora. |
-| **Cascada de reparto** | 1) Devolución del 100 % del capital aportado. 2) Retorno preferente del 12 % efectivo anual al inversionista, calculado sobre capital aportado y tiempo. 3) Excedente escalonado: 80/20 hasta 18 %, 65/35 hasta 24 %, 50/50 por encima de 24 % (propuesta de Claude; Daniel propuso 50/50 plano). |
+| **Cascada de reparto** | 1) Devolución del 100 % del capital aportado. 2) Retorno preferente del 12 % efectivo anual al inversionista, calculado sobre capital aportado y tiempo. 3) Excedente escalonado: 70/30 hasta 18 %, 60/40 hasta 24 %, 50/50 por encima de 24 % (propuesta B' de Claude; Daniel propuso 50/50 plano; ver 2.2 bis). |
 | **Distribuciones** | Al cierre de cada proyecto o hito de escrituración, cuando haya caja realizada. Nunca con dinero de nuevos aportes. |
 | **Aporte de los socios** | La gestora se compromete a que sus socios aporten, con reglas de público, al menos 5 % del capital de cada compartimento. |
 | **Valoración y reporte** | Valor de la unidad por la administradora; avalúo independiente anual; reporte trimestral por proyecto; ficha de una página; asamblea anual en Llanogrande. |
@@ -167,7 +217,7 @@ territorio y de mercado.
 ## 5. Pendientes que abren estas decisiones
 
 1. Hernán y Julián validan o corrigen las siete decisiones.
-2. Los tres deciden entre 50/50 plano, escalonado o un número único (tope 30 %).
+2. Los tres deciden entre A (50/50 plano) y B' (70/30, 60/40, 50/50 escalonado); ver tabla de 2.2 bis.
 3. Daniel arma el presupuesto real de opex y set-up con cotizaciones (abogado,
    fiduciaria, contador, marca).
 4. Nombre de la gestora y del vehículo.
