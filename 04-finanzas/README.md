@@ -44,6 +44,12 @@ horario o días se edita la rutina; para cambiar contenido, fuentes o estilo se 
 `rutina.md`. Decisiones de Daniel (30 oct 2026): lunes a viernes, lista a las 8:00 a. m.
 Colombia, aviso push al celular, montos en dólares visibles con interruptor para ocultarlos.
 
+**Kubera en la rutina:** la rutina se creó sin el conector de Kubera (la herramienta no permitía
+adjuntarlo) y Daniel decidió el 30 oct que corra así por ahora: el diario reutiliza las posiciones
+de la última edición y lo marca. Las posiciones se refrescan cuando Daniel abre una sesión manual
+o cuando adjunte Kubera a la rutina en claude.ai → Rutinas → "Diario financiero Daniel"
+(su rutina anterior "Daily portfolio briefing" lo tiene así).
+
 ## Tickers de TradingView (pendiente)
 
 Daniel puede pegar aquí los tickers de sus tres listas para que la rutina los cubra:

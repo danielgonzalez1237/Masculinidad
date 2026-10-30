@@ -41,8 +41,15 @@ no la rutina.
   colateral** y precio de liquidación de BTC ≈ deuda / (0,78 × WBTC en unidades), restando el
   WETH si lo hay. Umbral 0,78 es el histórico de Aave V3 Arbitrum; decir siempre "verificar
   health factor en Aave". Vencimientos (Pendle PT) y partidas de DEXTRUM (Bolivia, estaño).
-- Si Kubera falla: publicar igual, con una nota visible "posiciones no actualizadas hoy
-  (Kubera no respondió)" y reutilizar los datos de la edición anterior marcados como tales.
+- **Si en la sesión no existen herramientas `mcp__Kubera__*`** (hoy la rutina corre sin el
+  conector, decisión de Daniel del 30 oct 2026) o si Kubera falla: tomar las posiciones de la
+  **última edición** en `04-finanzas/diario/` (cantidades de WBTC/WETH, colateral, deuda USDC,
+  valor de IBKR y margen, partidas de DEXTRUM), recalcular LTV y precio de liquidación con el
+  precio de BTC del día, y escribir en la portada (semáforo o "qué cambió") y en el Markdown:
+  "Posiciones al DD/MM según Kubera; hoy no se refrescaron". No omitir las tablas de
+  posiciones: se conservan con esa marca. Cuando Daniel adjunte Kubera a la rutina desde
+  claude.ai (Rutinas → "Diario financiero Daniel" → conectores), este paso vuelve a ser
+  automático sin cambiar nada más.
 
 ### 3. Noticias y datos (12–16 búsquedas en paralelo, modo extended para lo de hoy)
 Priorizar lo fechado hoy y ayer. Cubrir siempre:
