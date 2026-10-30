@@ -26,6 +26,12 @@ no la rutina.
 
 ## Pasos
 
+### 0. Repositorio (la sesión arranca sin él)
+- La sesión de la rutina **no trae el repositorio clonado** ni tiene permiso de escritura por
+  defecto. Primero: `add_repo` con owner `danielgonzalez1237`, repo `Masculinidad`,
+  access `push`; clonar con el comando que devuelve; `register_repo_root` con la ruta del clon;
+  trabajar dentro de esa carpeta. Sin este paso el `git push` da 403 (comprobado el 30 oct).
+
 ### 1. Contexto (5 min)
 - `git pull` de la rama por defecto.
 - Leer `04-finanzas/README.md` (frentes, voces, reglas), la **edición anterior** en
@@ -69,7 +75,8 @@ No accesibles desde el entorno: tradingview.com (bloqueado por red) y X (requier
 Si Daniel ya pegó sus tickers de TradingView en `04-finanzas/README.md`, buscarlos también.
 
 ### 4. Escribir la edición (Markdown)
-Archivo `04-finanzas/diario/AAAA-MM-DD.md` con esta estructura fija:
+Archivo `04-finanzas/diario/AAAA-MM-DD.md` (si ya existe una edición de ese día, usar
+`AAAA-MM-DD-ed2.md`, `-ed3.md`, y lo mismo para la portada archivada) con esta estructura fija:
 
 ```
 # Edición N — día, D de mes de AAAA (corte HH:MM ET)
@@ -99,7 +106,8 @@ Archivo `04-finanzas/diario/AAAA-MM-DD.md` con esta estructura fija:
   conversación nueva).
 - `Artifact` publicar con `file_path` = `04-finanzas/portal-mercados.html`, `url` = la URL,
   `root` = `04-finanzas`, `files` = `{"ediciones/AAAA-MM-DD.html": "ediciones/AAAA-MM-DD.html"}`
-  (solo la nueva; las anteriores se conservan). Ediciones con más de 30 días: pasar `null`
+  (solo la nueva; las anteriores se conservan; comprobado: la edición archivada queda servida
+  junto a la portada). Ediciones con más de 30 días: pasar `null`
   en `files` para quitarlas del artefacto (siguen en el repo). No pasar `icon`.
 - `label`: "Edición N · D mmm AAAA".
 
