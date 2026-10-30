@@ -1,0 +1,402 @@
+<title>Portal Financiero Daniel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: briefing de una columna, resumen arriba (semáforo), luego impactos, tres frentes, calendario en tres horizontes, voces, glosario, fuentes. */
+:root{
+  --bg:#f2f4f6; --surface:#ffffff; --surface-2:#e9edf1; --fg:#17212b; --muted:#5b6977; --line:#d5dce3;
+  --accent:#0f5f6b; --accent-ink:#ffffff;
+  --metal:#8a6a1c; --metal-bg:#f7efd9; --personal:#2d5a9e; --personal-bg:#e3ecf9; --cripto:#6a44a8; --cripto-bg:#ece4f8; --cop:#2f7a4a; --cop-bg:#e0f1e5;
+  --neg:#b4352f; --neg-bg:#f9e4e2; --pos:#237a4b; --pos-bg:#e1f2e7; --neu:#6b7682; --neu-bg:#e9edf1; --warn:#9a6300; --warn-bg:#fbefd5;
+  --display:"Newsreader",Georgia,"Times New Roman",serif; --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101519; --surface:#181f26; --surface-2:#1f2831; --fg:#e6ebf0; --muted:#9aa7b3; --line:#2b3540;
+  --accent:#4fb3bf; --accent-ink:#0b1216;
+  --metal:#d9b25a; --metal-bg:#2c2410; --personal:#7ea7e8; --personal-bg:#14223a; --cripto:#b394ea; --cripto-bg:#241a3a; --cop:#7cc995; --cop-bg:#12291a;
+  --neg:#ef7a73; --neg-bg:#3a1a18; --pos:#67c48c; --pos-bg:#143022; --neu:#9aa7b3; --neu-bg:#1f2831; --warn:#e3b45a; --warn-bg:#332710;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101519; --surface:#181f26; --surface-2:#1f2831; --fg:#e6ebf0; --muted:#9aa7b3; --line:#2b3540;
+  --accent:#4fb3bf; --accent-ink:#0b1216;
+  --metal:#d9b25a; --metal-bg:#2c2410; --personal:#7ea7e8; --personal-bg:#14223a; --cripto:#b394ea; --cripto-bg:#241a3a; --cop:#7cc995; --cop-bg:#12291a;
+  --neg:#ef7a73; --neg-bg:#3a1a18; --pos:#67c48c; --pos-bg:#143022; --neu:#9aa7b3; --neu-bg:#1f2831; --warn:#e3b45a; --warn-bg:#332710;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,4.5vw,42px)}
+h2{font-size:clamp(22px,3vw,28px);margin-bottom:6px}
+h3{font-size:19px}
+h4{font-size:16px;font-family:var(--body);font-weight:600}
+p{margin:0}
+a{color:var(--accent)}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+header.top{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:flex-end;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--line)}
+header .lede{max-width:62ch;color:var(--muted);margin-top:8px}
+.stamp{font-family:var(--mono);font-size:13px;color:var(--muted);text-align:right}
+section{margin-top:40px}
+.sechead{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-bottom:14px}
+.sechead p{color:var(--muted);max-width:70ch}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;min-width:0}
+.card.flat{background:var(--surface-2);border-color:transparent}
+.sem{display:flex;flex-direction:column;gap:8px}
+.sem .row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;line-height:1.5;white-space:nowrap}
+.pill.neg{background:var(--neg-bg);color:var(--neg)}
+.pill.pos{background:var(--pos-bg);color:var(--pos)}
+.pill.neu{background:var(--neu-bg);color:var(--neu)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:4px;letter-spacing:.02em}
+.tag.metal{background:var(--metal-bg);color:var(--metal)}
+.tag.personal{background:var(--personal-bg);color:var(--personal)}
+.tag.cripto{background:var(--cripto-bg);color:var(--cripto)}
+.tag.cop{background:var(--cop-bg);color:var(--cop)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.stripe{border-left:4px solid var(--neu)}
+.stripe.neg{border-left-color:var(--neg)}
+.stripe.pos{border-left-color:var(--pos)}
+.stripe.warn{border-left-color:var(--warn)}
+.impact{display:grid;grid-template-columns:1fr;gap:10px}
+.impact .what{font-size:15.5px}
+.impact dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0}
+.impact dt{color:var(--muted);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding-top:2px}
+.impact dd{margin:0}
+.frente{display:flex;flex-direction:column;gap:12px}
+.frente .head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.frente .head h3{display:flex;align-items:center;gap:10px}
+.dot{width:12px;height:12px;border-radius:3px;display:inline-block}
+.dot.metal{background:var(--metal)}.dot.personal{background:var(--personal)}.dot.cripto{background:var(--cripto)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+td.num,th.num{text-align:right}
+.tablewrap{overflow-x:auto}
+ul{margin:0;padding-left:18px}
+li{margin:4px 0}
+.cal{display:grid;gap:12px}
+.cal .day{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.cal .day:last-child{border-bottom:0}
+.cal .d{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:2px}
+.cal .d b{display:block;color:var(--fg);font-size:15px}
+.voice{display:flex;flex-direction:column;gap:6px}
+.voice .who{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 24px}
+.gloss div{padding:8px 0;border-bottom:1px solid var(--line)}
+.gloss b{display:block}
+.note{background:var(--surface-2);border-radius:8px;padding:10px 14px;font-size:13.5px;color:var(--muted)}
+.lectura{border-top:1px dashed var(--line);padding-top:8px;margin-top:4px;font-size:14px}
+.lectura b{color:var(--accent)}
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer ul{columns:2;column-gap:28px;padding-left:16px}
+@media (max-width:560px){footer ul{columns:1}.cal .day{grid-template-columns:60px 1fr}}
+@media (prefers-reduced-motion: no-preference){a{transition:color .15s}}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div>
+    <p class="eyebrow">Briefing de mercados · edición 1</p>
+    <h1>Portal Financiero Daniel</h1>
+    <p class="lede">Lo que mueve tus tres frentes (metales preciosos y DEXTRUM, portafolio personal en IBKR, cripto y TUO), explicado en sus términos y con el efecto concreto en lo que tienes. Corte: viernes 30 de octubre de 2026, mediodía Nueva York.</p>
+  </div>
+  <div class="stamp">30 oct 2026 · 12:00 ET<br>Posiciones: Kubera (sync 30 oct)<br>Noticias: ver fuentes al pie</div>
+</header>
+
+<section>
+  <div class="sechead"><h2>Semáforo de la semana</h2><p>Cómo llega cada frente al cierre de octubre. Rojo es viento en contra, ámbar es “ojo”, verde es a favor.</p></div>
+  <div class="grid g4">
+    <div class="card sem">
+      <div class="row"><span class="tag metal">Metales · DEXTRUM</span><span class="pill neg">Viento en contra</span></div>
+      <p>Oro cae a la zona de <span class="num">US$3.890</span>/oz (−7 % desde el 19 oct) y la plata rompe <span class="num">US$50</span> (−14 %). La razón es la Fed: el mercado ya pone ~80 % de probabilidad a una <b>subida</b> de tasas en diciembre. Tasas reales más altas castigan al oro.</p>
+    </div>
+    <div class="card sem">
+      <div class="row"><span class="tag personal">Personal · IBKR</span><span class="pill warn">Mixto</span></div>
+      <p>S&amp;P 500 cerca de <span class="num">7.700</span> tras tres días al alza y una caída el jueves (Nasdaq −1,8 % a −2,5 % según la fuente). Amazon falló en ingresos y su flujo de caja libre fue negativo por el gasto en IA. Oracle −3 % tras subir 11 % el día anterior.</p>
+    </div>
+    <div class="card sem">
+      <div class="row"><span class="tag cripto">Cripto · TUO</span><span class="pill neg">Viento en contra</span></div>
+      <p>Binance reporta un ataque de ~<span class="num">US$6.300 M</span> (el mayor de la historia si se confirma) y suspende retiros. BTC baja de <span class="num">US$77.000</span> por primera vez en más de un mes; ETH ronda <span class="num">US$2.250</span>. Tu préstamo en Aave sigue lejos de liquidación (detalle abajo).</p>
+    </div>
+    <div class="card sem">
+      <div class="row"><span class="tag cop">Dólar · COP</span><span class="pill pos">Peso fuerte</span></div>
+      <p>USD/COP en <span class="num">3.165</span>, −4,5 % en octubre, mínimo desde 2021. Banco de la República decide hoy; el mercado espera 12,50 %. Peso fuerte sube el valor en dólares de tu apartamento en Medellín, pero también el de la hipoteca y las cuotas.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Los cinco impactos que más pesan</h2><p>Ordenados por efecto sobre tus portafolios, no por titulares. Cada uno trae el hecho, el término explicado y el efecto en lo tuyo.</p></div>
+  <div class="grid g2">
+
+    <article class="card stripe neg impact">
+      <div class="tags"><span class="tag metal">Metales</span><span class="tag cripto">Cripto</span><span class="tag personal">Personal</span></div>
+      <h3>1. La Fed no bajó, y el mercado ya descuenta una subida en diciembre</h3>
+      <p class="what">El miércoles 28 la Fed mantuvo la tasa en <span class="num">3,75 %–4,00 %</span> con votación 10–2: las dos disidentes (Cook y Hammack) querían <b>subir</b> 25 pb. El presidente Kevin Warsh evitó dar guía futura. El PIB del tercer trimestre creció 3,4 %, más de lo esperado. CME FedWatch pone ~<span class="num">80 %</span> a una subida el 9 de diciembre (hace un mes era 42 %).</p>
+      <dl>
+        <dt>Término</dt><dd><b>Tasa de política (fed funds)</b> es el precio del dinero a un día en EE. UU. Si sube, suben el costo del margen en IBKR, el rendimiento de SGOV y la “tasa libre de riesgo” contra la que compiten el oro y bitcoin, que no pagan interés.</dd>
+        <dt>Efecto</dt><dd>Negativo para oro, plata y cripto (activos sin rendimiento). Negativo para tecnología cara (QQQ, ORCL, AMZN, META) porque sus utilidades futuras se descuentan a una tasa mayor. Positivo para tu posición en SGOV y para el dólar.</dd>
+      </dl>
+      <p class="lectura"><b>Lectura de Claude:</b> la próxima pieza es el dato de empleo del 6 de noviembre. Un dato fuerte consolida la subida de diciembre y mantiene la presión sobre metales y cripto; uno débil la pone en duda y les da aire.</p>
+    </article>
+
+    <article class="card stripe neg impact">
+      <div class="tags"><span class="tag cripto">Cripto</span><span class="tag personal">MSTR</span></div>
+      <h3>2. Hack de Binance: el mayor de la historia, y el mercado vende primero</h3>
+      <p class="what">Binance dice que unos <span class="num">US$6.300 M</span> se vieron afectados (3.000 M congelados), suspendió retiros y habla de un portátil de ingeniero comprometido. TRM Labs y Chainalysis apuntan a Corea del Norte. Tether congeló ~1.570 M y Circle ~800 M. Polymarket tuvo un incidente separado (~2,7 M de 700 usuarios vía un proveedor externo; promete reembolso). BTC cayó a ~<span class="num">US$76.500</span>, mínimo de seis semanas; ETH −4,5 % a ~2.250. Standard Chartered advierte más caída.</p>
+      <dl>
+        <dt>Término</dt><dd><b>Riesgo de contraparte</b>: cuando dejas cripto en un exchange, el riesgo no es solo el precio sino que el custodio pierda los fondos. Lo opuesto es autocustodia o protocolos sin custodio como Aave.</dd>
+        <dt>Efecto</dt><dd>Tu BTC está como colateral en Aave (Arbitrum), no en Binance, así que no hay exposición directa al hack. La exposición es al precio: menos valor de colateral y MSTR cayendo con BTC. Nexo es custodio centralizado: vale revisar que no tenga exposición a Binance.</dd>
+      </dl>
+      <p class="lectura"><b>Lectura de Claude:</b> los cifras son preliminares y cambian a diario. Lo relevante para ti no es el monto sino si el miedo se extiende a otros custodios y si BTC pierde los <span class="num">US$74.000</span>–75.000, zona del mínimo de septiembre según varias crónicas.</p>
+    </article>
+
+    <article class="card stripe neg impact">
+      <div class="tags"><span class="tag metal">Metales · DEXTRUM</span></div>
+      <h3>3. Oro y plata en caída libre desde el 19 de octubre</h3>
+      <p class="what">Oro spot ~<span class="num">US$3.890</span> (−3,3 % hoy, −7 % en once días); plata ~<span class="num">US$49</span> (−5,7 % hoy, −14 %). La relación oro/plata se abrió a 74–79. Sucden proyecta oro en 3.900 y plata en 50 a fin de año. Las mineras cayeron más que el metal: Newmont −4,6 % el viernes pasado pese a resultados récord, por su guía de costo (AISC ~<span class="num">US$1.900</span>/oz en el cuarto trimestre); GDXJ (juniors) −9,6 % en una semana.</p>
+      <dl>
+        <dt>Término</dt><dd><b>Ratio oro/plata</b>: onzas de plata que compra una onza de oro. Sube cuando la plata sufre más (es mitad metal industrial, mitad refugio). <b>AISC</b> (all-in sustaining cost) es lo que le cuesta a una minera producir una onza; el margen es precio menos AISC.</dd>
+        <dt>Efecto</dt><dd>Tu GLD y el oro físico pierden valor; GLD en IBKR ya estaba por debajo de tu costo según Kubera. Para DEXTRUM, un oro en 3.900 sigue muy por encima de costos típicos de la industria, pero el apetito de inversionistas por proyectos mineros se enfría cuando las juniors caen 10 % semanal.</dd>
+      </dl>
+      <p class="lectura"><b>Lectura de Claude:</b> niveles que cita el mercado: oro 3.900 (soporte en prueba) y 3.800; plata 50 (perdido) y 47. Si la Fed sube en diciembre con inflación aún alta, el oro suele sufrir un tiempo y luego recuperar cuando el ciclo de subidas termina. El soporte estructural sigue siendo la compra de bancos centrales.</p>
+    </article>
+
+    <article class="card stripe warn impact">
+      <div class="tags"><span class="tag metal">Metales</span><span class="tag personal">Personal</span><span class="tag cop">COP</span></div>
+      <h3>4. Petróleo a US$112–116 por Irán y el estrecho de Ormuz</h3>
+      <p class="what">Irán afirma que petroleros chocaron minas al sur de Ormuz y hubo un nuevo ataque con lanchas; un tanquero se incendió al salir del estrecho. Brent diciembre ~<span class="num">US$116</span> (vence hoy), enero ~112, WTI ~103. Kpler cuenta al menos 18 barcos atacados en semanas. Varios analistas esperan que Irán endurezca después de las elecciones legislativas de EE. UU. del 3 de noviembre. Trump concedió una exención temporal de sanciones a Rusia (60 días) mientras la UE las mantiene.</p>
+        <dl>
+        <dt>Término</dt><dd><b>Prima de riesgo geopolítico</b>: parte del precio del crudo que no explica oferta y demanda sino el miedo a una interrupción. Sube y baja con los titulares, por eso el Brent se mueve 3–5 % en un día.</dd>
+        <dt>Efecto</dt><dd>Petróleo caro = más inflación = Fed más dura = malo para oro, cripto y tecnología. A la vez, Colombia es exportador de crudo: ayuda al peso (tu USD/COP bajo). Para una operación minera, el combustible es uno de los mayores costos operativos.</dd>
+      </dl>
+      <p class="lectura"><b>Lectura de Claude:</b> es el riesgo que más puede cambiar el guion en noviembre. Una escalada real después del 3 de noviembre dispara el crudo y el dólar; un acuerdo con Irán lo desinfla rápido y le quita presión a la Fed.</p>
+    </article>
+
+    <article class="card stripe warn impact">
+      <div class="tags"><span class="tag personal">Personal · IBKR</span></div>
+      <h3>5. Las grandes tecnológicas gastan en IA más de lo que el mercado tolera</h3>
+      <p class="what">Amazon falló en ingresos y utilidad, reportó flujo de caja libre negativo por segundo trimestre y mantuvo capex 2026 en ~<span class="num">US$220.000 M</span>; cayó 4 % el jueves y otro 2 % el viernes. Meta también con flujo de caja negativo (−2 %). Microsoft y Alphabet no subieron sus guías de capex y arrastraron a Oracle y a las “neoclouds” (Nebius, CoreWeave). Intel −29 %. Oracle acumula −27 % en el año.</p>
+      <dl>
+        <dt>Término</dt><dd><b>Capex</b> es inversión en activos (centros de datos, chips). <b>Flujo de caja libre</b> es lo que queda después de pagar capex. Cuando se vuelve negativo, la empresa financia la IA con deuda o caja acumulada y el mercado pregunta cuándo vuelve el retorno.</dd>
+        <dt>Efecto</dt><dd>Golpea directamente AMZN, META y ORCL en tu IBKR, y en menor medida QQQ y VOO (muy concentrados en estas empresas). Berkshire, VXUS y NU son el contrapeso. Tu margen en IBKR amplifica las caídas y su costo sube si la Fed sube.</dd>
+      </dl>
+      <p class="lectura"><b>Lectura de Claude:</b> Wall Street sigue con objetivos de fin de año entre 7.100 y 8.400 para el S&amp;P (mediana ~7.900–8.000, apenas por encima del nivel actual). El tema de noviembre es “¿paga la IA?”: Palantir el lunes y Nvidia a mediados/finales de mes son las pruebas.</p>
+    </article>
+
+    <article class="card stripe pos impact">
+      <div class="tags"><span class="tag cop">Dólar · COP</span></div>
+      <h3>Extra. Peso colombiano en máximos de cinco años</h3>
+      <p class="what">TRM del 29 oct: <span class="num">3.162,35</span>; spot ~3.165–3.168. El dólar abrió octubre en 3.312 (−4,5 % en el mes). Banco de la República sube tasa hoy, se espera a <span class="num">12,50 %</span> (inflación anual 6,29 %, muy por encima de la meta de 3 %). Diferencial de tasas frente a la Fed (12,5 % vs 4 %) sostiene la demanda por pesos. Riesgos: déficit fiscal (~7 % del PIB proyectado) y la rebaja de calificación soberana. La encuesta del Banco ve el dólar en 3.744 a fin de año; Banco de Occidente, 3.150–3.200.</p>
+      <dl>
+        <dt>Término</dt><dd><b>Carry trade</b>: pedir prestado en moneda de tasa baja (dólar) para invertir en una de tasa alta (peso). Mientras la brecha sea grande y no haya pánico, el peso se fortalece. Se deshace violentamente cuando hay miedo global.</dd>
+        <dt>Efecto</dt><dd>Tu patrimonio en Colombia (apartamentos Nuvó, carros) vale más en dólares; la hipoteca y las tarjetas en COP también cuestan más dólares. Si traes dólares a Colombia, hoy compran menos pesos que en septiembre.</dd>
+      </dl>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Tus tres frentes</h2><p>Posiciones según Kubera (sin montos; los ves allá). Para cada frente: qué tienes, qué lo mueve, niveles que mira el mercado y qué vigilar.</p></div>
+  <div class="grid g3">
+
+    <div class="card frente">
+      <div class="head"><h3><span class="dot metal"></span>Metales y DEXTRUM</h3><span class="pill neg">Presión</span></div>
+      <h4>Qué tienes</h4>
+      <ul>
+        <li>GLD en IBKR (bajo costo de compra), oro físico 18k y platino.</li>
+        <li>Capital de trabajo del proyecto en Bolivia (estaño) según Kubera. Si DEXTRUM es oro o plata, dime y lo ajusto.</li>
+      </ul>
+      <h4>Precios de referencia</h4>
+      <div class="tablewrap"><table>
+        <tr><th>Metal</th><th class="num">Precio</th><th>Comentario</th></tr>
+        <tr><td>Oro</td><td class="num">~3.890</td><td>−7 % desde el 19 oct; soporte 3.900/3.800</td></tr>
+        <tr><td>Plata</td><td class="num">~49</td><td>Perdió 50; ratio oro/plata 74–79</td></tr>
+        <tr><td>Estaño (LME)</td><td class="num">~50.500/t</td><td>Inventarios LME bajos (~4.000 t): soporte</td></tr>
+        <tr><td>Brent</td><td class="num">~112–116</td><td>Costo de energía para minería</td></tr>
+      </table></div>
+      <h4>Qué vigilar</h4>
+      <ul>
+        <li>Empleo EE. UU. (6 nov) y CPI (10 nov): definen la subida de diciembre, el principal lastre del oro.</li>
+        <li>Mineras grandes (Newmont, Barrick) corrigiendo más que el metal: señal de que el mercado ya no paga múltiplos altos a la minería.</li>
+        <li>Estaño sostenido por bajos inventarios; su riesgo es demanda industrial china.</li>
+      </ul>
+      <p class="lectura"><b>Lectura de Claude:</b> para levantar capital para DEXTRUM, un oro en 3.900 sigue siendo una gran historia de márgenes, pero el momento de mercado (juniors −10 % semanal) favorece esperar unas semanas o apuntar a inversionistas estratégicos y no a mercado.</p>
+    </div>
+
+    <div class="card frente">
+      <div class="head"><h3><span class="dot personal"></span>Portafolio personal (IBKR)</h3><span class="pill warn">Mixto</span></div>
+      <h4>Qué tienes</h4>
+      <ul>
+        <li>Índices: VOO, QQQ, VXUS. Caja: SGOV (letras del Tesoro 0–3 meses).</li>
+        <li>Acciones: ORCL, AMZN, BRK-B, META, NU, UBER. Proxy cripto: MSTR. Oro: GLD.</li>
+        <li>Préstamo de margen (aprox. 11 % del valor de la cuenta).</li>
+      </ul>
+      <h4>Reportes y datos que te tocan</h4>
+      <div class="tablewrap"><table>
+        <tr><th>Fecha</th><th>Evento</th><th>Te afecta por</th></tr>
+        <tr><td class="num">Lun 2 nov</td><td>Palantir (PLTR) tras el cierre</td><td>Termómetro del apetito por IA: QQQ, ORCL</td></tr>
+        <tr><td class="num">Mar 3 nov</td><td>Uber Q3 (fecha estimada, confirmar)</td><td>UBER directo</td></tr>
+        <tr><td class="num">Mié 4 nov</td><td>Qualcomm (confirmado), ADP</td><td>QQQ; lectura de empleo privado</td></tr>
+        <tr><td class="num">Vie 6 nov</td><td>Empleo (NFP): consenso +55 mil, desempleo 4,2 %</td><td>Todo: tasas, dólar, oro, cripto</td></tr>
+      </table></div>
+      <h4>Qué vigilar</h4>
+      <ul>
+        <li>Costo del margen: sube con cada alza de la Fed; SGOV compensa en parte.</li>
+        <li>Concentración en IA: AMZN, META, ORCL más QQQ y VOO responden a la misma pregunta.</li>
+        <li>MSTR: utilidad Q3 de US$19.500 M por valoración de BTC, pero “rendimiento BTC” negativo y salida del CFO pesaron en la acción.</li>
+      </ul>
+    </div>
+
+    <div class="card frente">
+      <div class="head"><h3><span class="dot cripto"></span>Cripto y TUO</h3><span class="pill neg">Presión</span></div>
+      <h4>Qué tienes</h4>
+      <ul>
+        <li>WBTC como colateral en Aave V3 (Arbitrum) con préstamo en USDC, en dos billeteras. WETH también en Aave.</li>
+        <li>Pendle PT apyUSD que vence el <b>5 de noviembre</b>.</li>
+        <li>Nexo (USDT y BTC), ETH en varias redes, pruebas en Hyperliquid, MSTR en IBKR.</li>
+      </ul>
+      <h4>Salud del préstamo en Aave (cálculo con Kubera, 30 oct)</h4>
+      <div class="tablewrap"><table>
+        <tr><th>Billetera</th><th class="num">LTV hoy</th><th class="num">BTC de liquidación aprox.</th><th>Margen</th></tr>
+        <tr><td>Principal (…47Aa)</td><td class="num">~25 %</td><td class="num">~US$24.000</td><td><span class="pill pos">Muy holgado</span></td></tr>
+        <tr><td>Secundaria (…db47)</td><td class="num">~54 %</td><td class="num">~US$53.000</td><td><span class="pill warn">Ojo: BTC −31 %</span></td></tr>
+      </table></div>
+      <p class="small muted">Supone umbral de liquidación de 78 % para WBTC en Arbitrum (parámetro histórico; Aave discute cambiarlo). Verifica el <b>health factor</b> en la app de Aave; la cifra oficial es esa.</p>
+      <h4>Qué vigilar</h4>
+      <ul>
+        <li>BTC: 74.000–75.000 es la zona que el mercado mira; perderla abre 70.000. Vencimiento de opciones de US$10.800 M hoy añade volatilidad.</li>
+        <li>Pendle: el 5 nov recibes el principal; decidir si renovar o usarlo para bajar el préstamo de la billetera secundaria.</li>
+        <li>Nexo: confirmar que no tenga exposición a Binance.</li>
+        <li>Flujos a ETF spot de BTC: entraron US$424 M del 26 al 28 oct; si salen con el hack, el piso se debilita.</li>
+      </ul>
+      <p class="lectura"><b>Lectura de Claude:</b> el préstamo grande está sano. El pequeño no corre peligro inmediato, pero un 54 % de LTV en un mercado que acaba de perder 6 % en un día es la posición que yo revisaría primero, idealmente con el dinero del Pendle del 5 nov.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Qué se espera</h2><p>Tres horizontes. Lo fechado está confirmado por calendario oficial o prensa; lo marcado como “por confirmar” viene de calendarios de terceros.</p></div>
+  <div class="grid g3">
+
+    <div class="card">
+      <p class="eyebrow">Próximos 7 días · 31 oct – 6 nov</p>
+      <div class="cal">
+        <div class="day"><div class="d"><b>Vie 30</b>hoy</div><div>Banco de la República decide tasa (esperado 12,50 %). Vence el Brent de diciembre. Vencen US$10.800 M en opciones de BTC. Cierre mensual: octubre negativo para oro, plata y cripto.</div></div>
+        <div class="day"><div class="d"><b>Lun 2</b>nov</div><div>Palantir reporta tras el cierre (consenso EPS 0,41; ingresos ~US$2.180 M). Primera lectura del humor hacia la IA después de Amazon.</div></div>
+        <div class="day"><div class="d"><b>Mar 3</b>nov</div><div><b>Elecciones legislativas de EE. UU.</b> Mercados de predicción dan 82–91 % a que los demócratas tomen la Cámara; Senado incierto. JOLTS (vacantes). Uber (por confirmar). Riesgo: conteo lento y disputado, que castiga tecnología y favorece refugios.</div></div>
+        <div class="day"><div class="d"><b>Mié 4</b>nov</div><div>ADP empleo privado. Un calendario lista PCE de septiembre (el indicador de inflación que usa la Fed). Qualcomm reporta. Decisiones de otros bancos centrales.</div></div>
+        <div class="day"><div class="d"><b>Jue 5</b>nov</div><div>Vence tu Pendle PT apyUSD. DANE suele publicar inflación de octubre en Colombia alrededor de esta fecha.</div></div>
+        <div class="day"><div class="d"><b>Vie 6</b>nov</div><div><b>Empleo de octubre (NFP)</b>: consenso +55 mil (vs +29 mil en sept), desempleo 4,2 %. Es el dato que puede confirmar o frenar la subida de diciembre.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="eyebrow">Próximo mes · noviembre</p>
+      <ul>
+        <li><b>10 nov · CPI de octubre.</b> Si la inflación sigue alta con petróleo en 110+, la subida de diciembre queda casi sellada.</li>
+        <li><b>Resultado electoral y después.</b> Gobierno dividido suele leerse como “menos cambios bruscos” (Morgan Stanley). Cámara demócrata sube riesgo regulatorio a tecnología y de disputas por el techo de deuda. Varios analistas esperan que Irán endurezca su postura tras las elecciones.</li>
+        <li><b>Nvidia</b> reporta a mediados/finales de noviembre (fecha por confirmar). Es el veredicto del trimestre sobre la IA.</li>
+        <li><b>Minutas de la Fed</b> (~18 nov): cuántos miembros quieren subir.</li>
+        <li><b>Binance.</b> Reapertura de retiros, cifras finales y si el contagio llega a otros custodios. Standard Chartered ve más caída antes de piso.</li>
+        <li><b>Colombia.</b> Inflación de octubre, trayectoria fiscal y la encuesta del Banco (dólar 3.744 a fin de año vs mercado en 3.165: alguien está muy equivocado).</li>
+      </ul>
+      <p class="lectura"><b>Lectura de Claude:</b> noviembre se decide con tres datos (empleo, CPI, Nvidia) y un evento (elecciones). Hasta el 10 de noviembre el sesgo para oro y cripto es defensivo.</p>
+    </div>
+
+    <div class="card">
+      <p class="eyebrow">Próximo trimestre · hasta enero 2027</p>
+      <ul>
+        <li><b>9 dic · FOMC.</b> ~80 % de probabilidad de subir a 4,00–4,25 %. Trae proyecciones (dot plot): cuántas subidas más ven para 2027. Es el evento del trimestre para oro, cripto y tecnología.</li>
+        <li><b>Acciones.</b> Objetivos de fin de año del S&amp;P 500: 7.100 (BofA) a 8.400 (Yardeni), Goldman 8.000. Mediana ~7.900–8.000, casi sin recorrido desde 7.700. Soporte: utilidades creciendo ~25–29 % anual.</li>
+        <li><b>Oro y plata.</b> Sucden: oro ~3.900 y plata ~50 a fin de año con Fed dura; soporte estructural de bancos centrales. Si el ciclo de subidas se agota en el primer trimestre, el oro suele anticiparse.</li>
+        <li><b>Bitcoin.</b> Saylor: “inicio del próximo mercado alcista”, más de 100.000 en 12 meses. Tom Lee: nuevo máximo este año (objetivo 250.000; falló en 2025). Standard Chartered: más caída primero. Vencimientos trimestrales de opciones el último viernes de diciembre.</li>
+        <li><b>Petróleo e Irán.</b> El estrecho lleva 240+ días en conflicto; un acuerdo o una escalada cambian el cuadro de inflación para todo el trimestre.</li>
+        <li><b>Colombia.</b> Banco de la República en 12,50 % o más; la pregunta del trimestre es cuándo deja de subir y si el déficit fiscal termina pesando sobre el peso.</li>
+        <li><b>Temporada de resultados Q4</b> arranca a mediados de enero; Berkshire reporta a finales de febrero.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Las voces que sigues</h2><p>Última postura pública encontrada de cada uno, con fecha. Lo que no encontré fechado esta semana lo marco.</p></div>
+  <div class="grid g3">
+    <div class="card voice"><div class="who"><h4>Michael Saylor</h4><span class="small muted">28–30 oct</span></div><span class="tag cripto">Cripto</span><p>En los resultados de Strategy: “estamos al inicio del próximo mercado alcista de bitcoin”. A Bloomberg: BTC vuelve sobre 100.000 en 12 meses, apoyado en el rebote desde la media de 200 semanas. Strategy reportó utilidad de US$19.500 M pero su acción cayó por el “BTC yield” negativo y la salida del CFO.</p></div>
+    <div class="card voice"><div class="who"><h4>Tom Lee (Fundstrat)</h4><span class="small muted">~27 oct</span></div><span class="tag cripto">Cripto</span> <span class="tag personal">Acciones</span><p>“Uno de los mayores rallies de nuestra vida”; cree que BTC hace nuevo máximo este año (objetivo 250.000). Sigue alcista en acciones a fin de año. Ojo: falló sus objetivos de 2025 y dentro de Fundstrat hay voces más cautas (Sean Farrell). No encontré declaración suya posterior al hack.</p></div>
+    <div class="card voice"><div class="who"><h4>Felipe Campos (Alianza)</h4><span class="small muted">jul–sep 2026</span></div><span class="tag cop">COP</span><p>La tasa alta del Banco explica el dólar bajo, pero el déficit fiscal empuja en sentido contrario. En julio decía que el dólar podría romper 3.000 si el gobierno entrante concreta sus propuestas fiscales. Sin cita suya de esta semana; conviene revisar su X tras la decisión de hoy.</p></div>
+    <div class="card voice"><div class="who"><h4>Juan Rodríguez (Bitcoin y Criptos)</h4><span class="small muted">2025–2026</span></div><span class="tag cripto">Cripto</span><p>Tesis central: toda altcoin tiende a cero contra bitcoin en el largo plazo; el ciclo alcista “no ha terminado”. Nada fechado en octubre de 2026 en prensa; su canal de YouTube es la fuente.</p></div>
+    <div class="card voice"><div class="who"><h4>Jack Garzón</h4><span class="small muted">post. ago 2026</span></div><span class="tag cripto">Cripto</span><p>Sostiene que BTC ya hizo el piso de este ciclo, con la advertencia de posibles “cisnes negros”. El hack de Binance es justo el tipo de evento que ponía como riesgo. Sin declaración posterior encontrada.</p></div>
+    <div class="card voice flat"><div class="who"><h4>Cómo leerlos juntos</h4></div><p class="lectura" style="border:0;padding:0;margin:0"><b>Lectura de Claude:</b> los cinco son estructuralmente alcistas en bitcoin y bajistas en dólar/peso o neutrales. Eso es útil para la tesis de largo plazo y malo para calibrar riesgo de corto plazo. El contrapeso esta semana lo dan Standard Chartered (más caída) y el propio mercado de tasas (80 % de subida).</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Glosario de esta edición</h2><p>Los términos que aparecen arriba, en una frase cada uno.</p></div>
+  <div class="gloss">
+    <div><b>FOMC</b>Comité de la Fed que fija la tasa. Se reúne ocho veces al año; la próxima es el 9 de diciembre.</div>
+    <div><b>Puntos básicos (pb)</b>Centésimas de punto porcentual. 25 pb = 0,25 %.</div>
+    <div><b>Dot plot</b>Gráfico donde cada miembro de la Fed marca dónde ve la tasa; sale en marzo, junio, septiembre y diciembre.</div>
+    <div><b>NFP (nóminas no agrícolas)</b>Empleos creados en el mes en EE. UU. Sale el primer viernes del mes a las 8:30 ET.</div>
+    <div><b>CPI vs PCE</b>Dos medidas de inflación. CPI es la popular; PCE es la que la Fed usa para su meta de 2 %.</div>
+    <div><b>Tasa real</b>Tasa nominal menos inflación. Cuando sube, el oro (que no paga interés) pierde atractivo.</div>
+    <div><b>TRM</b>Tasa representativa del mercado: el promedio oficial del dólar en Colombia del día anterior.</div>
+    <div><b>LTV</b>Préstamo dividido por colateral. En Aave, si pasa el umbral de liquidación, el protocolo vende tu colateral.</div>
+    <div><b>Health factor</b>Indicador de Aave: por encima de 1 estás a salvo; en 1 te liquidan. Es la cifra que debes mirar.</div>
+    <div><b>PT (Pendle)</b>Token que te devuelve el principal en una fecha fija a cambio de ceder el rendimiento variable.</div>
+    <div><b>Capex / FCF</b>Inversión en activos / caja que queda tras esa inversión. FCF negativo = la empresa gasta más de lo que genera.</div>
+    <div><b>AISC</b>Costo total por onza de una minera. Margen = precio del oro − AISC.</div>
+    <div><b>Vencimiento de opciones</b>Día en que expiran contratos; los precios tienden a moverse hacia niveles con muchas posiciones (“max pain”).</div>
+    <div><b>Media de 200 semanas</b>Promedio de casi cuatro años de precio de BTC; históricamente el piso de los mercados bajistas.</div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Cómo se arma este portal.</b> Posiciones: Kubera (conectado). Noticias y datos: búsquedas del 30 de octubre de 2026 con las fuentes abajo; los precios son instantáneas de distintos momentos del día y pueden diferir del cierre. Las frases marcadas “Lectura de Claude” son interpretación, no hechos. Nada aquí es asesoría de inversión. No pude abrir tus listas de TradingView desde este entorno (<a href="https://es.tradingview.com/watchlists/321093314/">1</a>, <a href="https://es.tradingview.com/watchlists/320772800/">2</a>, <a href="https://es.tradingview.com/watchlists/317651462/">3</a>); si me pegas los tickers, los incorporo. Para actualizar: “Lee el repositorio y actualiza el portal de mercados”.</p>
+  <p style="margin-top:12px"><b>Fuentes</b></p>
+  <ul>
+    <li><a href="https://www.cnbc.com/2026/10/28/fed-meeting-today-live-updates.html">CNBC: decisión de la Fed, 28 oct</a></li>
+    <li><a href="https://www.kucoin.com/news/flash/december-25-basis-point-rate-hike-probability-at-79-6">CME FedWatch vía KuCoin: 79,6 % subida en dic</a></li>
+    <li><a href="https://www.fxstreet.com/analysis/the-federal-reserve-holds-rates-at-4-as-divisions-emerge-among-policymakers-202610301129">FXStreet: Fed 10–2, disidencias</a></li>
+    <li><a href="https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html">CNBC: Amazon, Intel y gasto en IA</a></li>
+    <li><a href="https://www.cnbc.com/2026/10/29/microsoft-google-ai-capex-estimates.html">CNBC: Microsoft y Google no suben capex</a></li>
+    <li><a href="https://247wallst.com/investing/2026/10/29/ai-cloud-stocks-fall-as-big-tech-capex-comes-in-light-fastly-sinks-6-oracle-and-nebius-drop-3/">24/7 Wall St: Oracle y neoclouds</a></li>
+    <li><a href="https://www.riotimesonline.com/silver-drops-5-gold-3-as-rout-accelerates/">Rio Times: plata −5 %, oro −3 % (30 oct)</a></li>
+    <li><a href="https://www.kitco.com/news/article/2026-10-28/gold-prices-could-fall-3900-silver-50-fed-tightening-pressures-precious">Kitco/Sucden: oro 3.900, plata 50</a></li>
+    <li><a href="https://www.usagold.com/daily-precious-metals-market-report-october-29-2026/">USAGold: reporte 29 oct</a></li>
+    <li><a href="https://www.kitco.com/opinion/2026-10-27/why-gold-miners-fall-even-after-record-profits">Kitco: por qué caen las mineras</a></li>
+    <li><a href="https://www.investing.com/news/stock-market-news/newmont-stands-out-among-oversold-mining-stocks-as-gold-miners-trade-at-a-discount-93CH-4973453">Investing.com: Newmont y mineras</a></li>
+    <li><a href="https://www.westmetall.com/en/markdaten.php?action=showtable">Westmetall: estaño LME</a></li>
+    <li><a href="https://www.coindesk.com/markets/2026/10/30/usd6-billion-binance-hack-sends-bitcoin-ether-tumbling-standard-chartered-sees-more-losses-ahead">CoinDesk: hack de Binance y BTC</a></li>
+    <li><a href="https://www.insurancejournal.com/news/international/2026/10/30/890894.htm">Insurance Journal/Bloomberg: Binance US$6.300 M</a></li>
+    <li><a href="https://www.axios.com/2026/10/29/binance-cyberattack-crypto-heist">Axios: Binance suspende retiros</a></li>
+    <li><a href="https://cryptotimes.io/2026/10/30/strategys-19-5b-q3-profit-negative-btc-yield-and-cfo-exit-weigh-on-mstr">CryptoTimes: Strategy Q3 y Saylor</a></li>
+    <li><a href="https://www.foxbusiness.com/markets/michael-saylor-predicts-bitcoin-blow-past-100k-he-declares-new-bull-market-underway">Fox Business: Saylor, &gt;100k</a></li>
+    <li><a href="https://www.ccn.com/news/crypto/bitcoin-250k-tom-lee-biggest-rallies-lifetime-options-expiry-looms/">CCN: Tom Lee y vencimiento de opciones</a></li>
+    <li><a href="https://financefeeds.com/brent-crude-oil-price-116-friday-hormuz-mine-strikes-december-expiry-fourth-monthly-gain-bull-120-bear-108/">FinanceFeeds: Brent 116, Ormuz (30 oct)</a></li>
+    <li><a href="https://oilprice.com/Energy/Crude-Oil/Oil-Markets-Brace-for-a-New-Iran-Escalation-After-US-Midterms.html">OilPrice: Irán tras las elecciones</a></li>
+    <li><a href="https://www.cnbc.com/2026/10/29/us-midterms-election-wall-street-options-markets.html">CNBC: elecciones y mercados</a></li>
+    <li><a href="https://www.morganstanley.com/insights/articles/midterm-election-market-impact-2026">Morgan Stanley: impacto de las legislativas</a></li>
+    <li><a href="https://newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-">Newsquawk: semana 2–6 nov</a></li>
+    <li><a href="https://www.marketbeat.com/earnings/reports/2026-11-2-palantir-technologies-inc-stock/">MarketBeat: Palantir 2 nov</a></li>
+    <li><a href="https://www.qualcomm.com/news/releases/2026/10/qualcomm-schedules-fourth-quarter-and-fiscal-2026-earnings-relea">Qualcomm: resultados 4 nov</a></li>
+    <li><a href="https://www.goldmansachs.com/insights/articles/s-and-p-500-forecast-to-climb-as-earnings-growth-powers-stocks-higher">Goldman Sachs: S&amp;P 8.000</a></li>
+    <li><a href="https://www.thestreet.com/investing/stocks/every-major-wall-street-analysts-sp-500-forecast-for-2026">TheStreet: objetivos S&amp;P 2026</a></li>
+    <li><a href="https://www.infobae.com/colombia/2026/10/30/dolar-hoy-en-colombia-cotizacion-de-apertura-del-30-de-octubre/">Infobae: dólar 30 oct</a></li>
+    <li><a href="https://www.elheraldo.co/economia/2026/10/29/mercado-financiero-preve-que-el-banco-de-la-republica-aumente-la-tasa-de-interes-en-1250/">El Heraldo: BanRep, expectativa 12,50 %</a></li>
+    <li><a href="https://www.bloomberglinea.com/latinoamerica/colombia/dolar-en-colombia-bancos-y-brokers-revisan-a-la-baja-sus-proyecciones-para-el-tercer-trimestre-2026/">Bloomberg Línea: Felipe Campos, dólar</a></li>
+    <li><a href="https://www.criptonoticias.com/mercados/jack-garzon-cisne-negro-suelo-precio-bitcoin/">CriptoNoticias: Jack Garzón</a></li>
+    <li><a href="https://www.criptonoticias.com/comunidad/juan-rodriguez-bitcoiners-shitcoiners-estamos-mismo">CriptoNoticias: Juan Rodríguez</a></li>
+    <li><a href="https://governance.aave.com/t/arfc-adjusting-wbtc-parameters-to-address-bitgo-transition-risks/19096/11">Aave governance: parámetros WBTC</a></li>
+  </ul>
+</footer>
+</div>
