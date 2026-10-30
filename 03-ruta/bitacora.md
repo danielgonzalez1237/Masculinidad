@@ -20,8 +20,18 @@ Felipe Campos, Juan Rodríguez y Jack Garzón.
 - Posiciones tomadas de Kubera (conector). Las listas de TradingView no se pudieron
   abrir desde el entorno de Claude.
 
-**Pendiente de Daniel:** confirmar qué metal es el foco de DEXTRUM, explicar qué es TUO
-y pegar los tickers de sus tres listas de TradingView.
+**Segunda parte de la sesión:** Daniel aclaró que DEXTRUM es su comercializadora minera en
+Bolivia (estaño primero; oro y plata en seguimiento) y que TUO es la gestión/hedge de
+cripto. Pidió que el portal se actualice solo, como un diario. Decisiones: lunes a viernes,
+listo a las 8:00 a. m. Colombia, aviso push, montos en dólares con interruptor para
+ocultarlos. Se creó la rutina "Diario financiero Daniel" (7:37 a. m. Colombia, sesión nueva
+cada día, conector Kubera) que sigue `04-finanzas/rutina.md`; el portal pasó a formato diario
+(bloque de estaño, "qué cambió", archivo de ediciones). Daniel autorizó que la rutina haga
+push a la rama por defecto del repositorio.
+
+**Pendiente de Daniel:** pegar los tickers de TradingView en `04-finanzas/README.md` (o
+permitir tradingview.com en la red del entorno) y decidir si desactiva la rutina anterior
+"Daily portfolio briefing" para no recibir dos avisos.
 
 ---
 

@@ -95,6 +95,18 @@ li{margin:4px 0}
 .note{background:var(--surface-2);border-radius:8px;padding:10px 14px;font-size:13.5px;color:var(--muted)}
 .lectura{border-top:1px dashed var(--line);padding-top:8px;margin-top:4px;font-size:14px}
 .lectura b{color:var(--accent)}
+.money{font-family:var(--mono);font-variant-numeric:tabular-nums;transition:filter .15s}
+.hide-money .money{filter:blur(7px);user-select:none}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-end}
+button.tgl{font:inherit;font-size:13px;font-weight:600;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer}
+button.tgl:hover{border-color:var(--accent)}
+button.tgl:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.delta{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.delta .k{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+.delta .v{font-size:22px;font-family:var(--display);font-weight:600;margin-top:2px}
+.delta .s{font-size:13px;color:var(--muted)}
+.up{color:var(--pos)}.down{color:var(--neg)}
+.ediciones li{margin:2px 0}
 footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 footer ul{columns:2;column-gap:28px;padding-left:16px}
 @media (max-width:560px){footer ul{columns:1}.cal .day{grid-template-columns:60px 1fr}}
@@ -107,9 +119,12 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-of
   <div>
     <p class="eyebrow">Briefing de mercados · edición 1</p>
     <h1>Portal Financiero Daniel</h1>
-    <p class="lede">Lo que mueve tus tres frentes (metales preciosos y DEXTRUM, portafolio personal en IBKR, cripto y TUO), explicado en sus términos y con el efecto concreto en lo que tienes. Corte: viernes 30 de octubre de 2026, mediodía Nueva York.</p>
+    <p class="lede">Diario de mercados para tus tres frentes: metales y DEXTRUM (tu comercializadora minera en Bolivia: estaño primero, oro y plata en seguimiento), portafolio personal en IBKR, y cripto gestionado por TUO. Cada hecho trae el término explicado y el efecto concreto en lo que tienes. Corte: viernes 30 de octubre de 2026, mediodía Nueva York.</p>
   </div>
-  <div class="stamp">30 oct 2026 · 12:00 ET<br>Posiciones: Kubera (sync 30 oct)<br>Noticias: ver fuentes al pie</div>
+  <div>
+    <div class="stamp">30 oct 2026 · 12:00 ET<br>Posiciones: Kubera (sync 30 oct)<br>Noticias: ver fuentes al pie</div>
+    <div class="toolbar" style="margin-top:10px"><button class="tgl" id="toggle-money" type="button" aria-pressed="false">Ocultar montos</button></div>
+  </div>
 </header>
 
 <section>
@@ -131,6 +146,19 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-of
       <div class="row"><span class="tag cop">Dólar · COP</span><span class="pill pos">Peso fuerte</span></div>
       <p>USD/COP en <span class="num">3.165</span>, −4,5 % en octubre, mínimo desde 2021. Banco de la República decide hoy; el mercado espera 12,50 %. Peso fuerte sube el valor en dólares de tu apartamento en Medellín, pero también el de la hipoteca y las cuotas.</p>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Qué cambió desde la edición anterior</h2><p>Primera edición: aún no hay con qué comparar noticias. Desde mañana aquí van de tres a seis líneas con lo que cambió (precios, calendario, salud de tus préstamos). Lo que sí hay hoy es el movimiento de tu patrimonio según Kubera.</p></div>
+  <div class="card">
+    <div class="delta">
+      <div><div class="k">Patrimonio neto</div><div class="v money">US$1.624.812</div><div class="s">Activos <span class="money">US$1.879.739</span> · deuda <span class="money">US$254.927</span></div></div>
+      <div><div class="k">Hoy (29→30 oct)</div><div class="v down">−0,3 %</div><div class="s"><span class="money">−US$4.799</span>. Lo explica casi todo la caída del WBTC en Aave (<span class="money">−US$1.801</span>) y el alza de la hipoteca en dólares por el peso fuerte.</div></div>
+      <div><div class="k">Octubre</div><div class="v down">−2,2 %</div><div class="s"><span class="money">−US$35.708</span>. IBKR subió <span class="money">+US$15.660</span> en el mes; WBTC <span class="money">−US$3.718</span>; la deuda creció <span class="money">+US$60.601</span> por el nuevo margen en IBKR y más USDC prestado en Aave.</div></div>
+      <div><div class="k">Investable (líquido)</div><div class="v">32 %</div><div class="s">de tus activos. El resto es inmobiliario (56 %) y privado. CAGR del año: patrimonio −5,1 %, parte líquida +32,5 %.</div></div>
+    </div>
+    <p class="lectura"><b>Lectura de Claude:</b> el mes fue flojo por el peso colombiano, no por tus inversiones: la hipoteca en COP sube en dólares cuando el dólar cae. La parte líquida va bien en el año gracias a BTC e IBKR.</p>
   </div>
 </section>
 
@@ -213,24 +241,31 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-of
       <div class="head"><h3><span class="dot metal"></span>Metales y DEXTRUM</h3><span class="pill neg">Presión</span></div>
       <h4>Qué tienes</h4>
       <ul>
-        <li>GLD en IBKR (bajo costo de compra), oro físico 18k y platino.</li>
-        <li>Capital de trabajo del proyecto en Bolivia (estaño) según Kubera. Si DEXTRUM es oro o plata, dime y lo ajusto.</li>
+        <li><b>DEXTRUM</b> (comercialización minera, Bolivia): capital de trabajo en estaño <span class="money">US$40.000</span> + <span class="money">US$16.500</span>, más <span class="money">US$20.000</span> del proyecto por cobrar, según Kubera.</li>
+        <li>GLD en IBKR <span class="money">US$17.929</span> (por debajo de tu costo), oro físico 18k <span class="money">US$11.552</span> y platino <span class="money">US$743</span>.</li>
       </ul>
-      <h4>Precios de referencia</h4>
+      <h4>Estaño (lo primero de DEXTRUM)</h4>
+      <div class="tablewrap"><table>
+        <tr><th>LME</th><th class="num">US$/t</th><th>Comentario</th></tr>
+        <tr><td>Cash (23 oct, oficial)</td><td class="num">50.855</td><td>Última liquidación oficial encontrada</td></tr>
+        <tr><td>3 meses</td><td class="num">~50.110–50.550</td><td>Cayó ~1 % esta semana con el SHFE</td></tr>
+        <tr><td>Inventarios LME</td><td class="num">~4.045 t</td><td>Bajos: sostienen el precio y las primas físicas</td></tr>
+      </table></div>
+      <p class="small muted">El estaño cotiza casi sin cambio en octubre mientras oro y plata caen 7–14 %: su precio depende de inventarios y de la demanda de electrónica (soldadura), no de la Fed. Riesgo: pedidos industriales débiles en China.</p>
+      <h4>Oro y plata (en seguimiento)</h4>
       <div class="tablewrap"><table>
         <tr><th>Metal</th><th class="num">Precio</th><th>Comentario</th></tr>
         <tr><td>Oro</td><td class="num">~3.890</td><td>−7 % desde el 19 oct; soporte 3.900/3.800</td></tr>
         <tr><td>Plata</td><td class="num">~49</td><td>Perdió 50; ratio oro/plata 74–79</td></tr>
-        <tr><td>Estaño (LME)</td><td class="num">~50.500/t</td><td>Inventarios LME bajos (~4.000 t): soporte</td></tr>
-        <tr><td>Brent</td><td class="num">~112–116</td><td>Costo de energía para minería</td></tr>
+        <tr><td>Brent</td><td class="num">~112–116</td><td>Costo de energía y transporte para la minería</td></tr>
       </table></div>
       <h4>Qué vigilar</h4>
       <ul>
         <li>Empleo EE. UU. (6 nov) y CPI (10 nov): definen la subida de diciembre, el principal lastre del oro.</li>
         <li>Mineras grandes (Newmont, Barrick) corrigiendo más que el metal: señal de que el mercado ya no paga múltiplos altos a la minería.</li>
-        <li>Estaño sostenido por bajos inventarios; su riesgo es demanda industrial china.</li>
+        <li>Estaño: dato de inventarios LME diario y PMI manufacturero de China; una caída bajo 48.000 cambiaría el tono.</li>
       </ul>
-      <p class="lectura"><b>Lectura de Claude:</b> para levantar capital para DEXTRUM, un oro en 3.900 sigue siendo una gran historia de márgenes, pero el momento de mercado (juniors −10 % semanal) favorece esperar unas semanas o apuntar a inversionistas estratégicos y no a mercado.</p>
+      <p class="lectura"><b>Lectura de Claude:</b> para una comercializadora, un estaño estable en 50.000 con inventarios bajos es un buen entorno de márgenes y primas. El riesgo de octubre no está en el estaño sino en el crédito y el apetito de inversionistas hacia minería, que se enfría cuando las juniors de oro caen 10 % semanal.</p>
     </div>
 
     <div class="card frente">
@@ -239,7 +274,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-of
       <ul>
         <li>Índices: VOO, QQQ, VXUS. Caja: SGOV (letras del Tesoro 0–3 meses).</li>
         <li>Acciones: ORCL, AMZN, BRK-B, META, NU, UBER. Proxy cripto: MSTR. Oro: GLD.</li>
-        <li>Préstamo de margen (aprox. 11 % del valor de la cuenta).</li>
+        <li>Cuenta en <span class="money">US$179.353</span>; préstamo de margen <span class="money">US$19.600</span> (aprox. 11 % del valor de la cuenta).</li>
       </ul>
       <h4>Reportes y datos que te tocan</h4>
       <div class="tablewrap"><table>
@@ -258,18 +293,18 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-of
     </div>
 
     <div class="card frente">
-      <div class="head"><h3><span class="dot cripto"></span>Cripto y TUO</h3><span class="pill neg">Presión</span></div>
+      <div class="head"><h3><span class="dot cripto"></span>Cripto (gestión TUO)</h3><span class="pill neg">Presión</span></div>
       <h4>Qué tienes</h4>
       <ul>
-        <li>WBTC como colateral en Aave V3 (Arbitrum) con préstamo en USDC, en dos billeteras. WETH también en Aave.</li>
-        <li>Pendle PT apyUSD que vence el <b>5 de noviembre</b>.</li>
+        <li>WBTC como colateral en Aave V3 (Arbitrum) <span class="money">US$239.241</span> con préstamo en USDC <span class="money">US$66.133</span>, en dos billeteras. WETH en Aave <span class="money">US$4.793</span>.</li>
+        <li>Pendle PT apyUSD <span class="money">US$5.678</span> que vence el <b>5 de noviembre</b>.</li>
         <li>Nexo (USDT y BTC), ETH en varias redes, pruebas en Hyperliquid, MSTR en IBKR.</li>
       </ul>
       <h4>Salud del préstamo en Aave (cálculo con Kubera, 30 oct)</h4>
       <div class="tablewrap"><table>
-        <tr><th>Billetera</th><th class="num">LTV hoy</th><th class="num">BTC de liquidación aprox.</th><th>Margen</th></tr>
-        <tr><td>Principal (…47Aa)</td><td class="num">~25 %</td><td class="num">~US$24.000</td><td><span class="pill pos">Muy holgado</span></td></tr>
-        <tr><td>Secundaria (…db47)</td><td class="num">~54 %</td><td class="num">~US$53.000</td><td><span class="pill warn">Ojo: BTC −31 %</span></td></tr>
+        <tr><th>Billetera</th><th class="num">Colateral / deuda</th><th class="num">LTV hoy</th><th class="num">BTC de liquidación aprox.</th><th>Margen</th></tr>
+        <tr><td>Principal (…47Aa)</td><td class="num"><span class="money">230.165 / 58.658</span></td><td class="num">~25 %</td><td class="num">~US$24.000</td><td><span class="pill pos">Muy holgado</span></td></tr>
+        <tr><td>Secundaria (…db47)</td><td class="num"><span class="money">13.869 / 7.475</span></td><td class="num">~54 %</td><td class="num">~US$53.000</td><td><span class="pill warn">Ojo: BTC −31 %</span></td></tr>
       </table></div>
       <p class="small muted">Supone umbral de liquidación de 78 % para WBTC en Arbitrum (parámetro histórico; Aave discute cambiarlo). Verifica el <b>health factor</b> en la app de Aave; la cifra oficial es esa.</p>
       <h4>Qué vigilar</h4>
@@ -361,7 +396,11 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-of
 </section>
 
 <footer>
-  <p><b>Cómo se arma este portal.</b> Posiciones: Kubera (conectado). Noticias y datos: búsquedas del 30 de octubre de 2026 con las fuentes abajo; los precios son instantáneas de distintos momentos del día y pueden diferir del cierre. Las frases marcadas “Lectura de Claude” son interpretación, no hechos. Nada aquí es asesoría de inversión. No pude abrir tus listas de TradingView desde este entorno (<a href="https://es.tradingview.com/watchlists/321093314/">1</a>, <a href="https://es.tradingview.com/watchlists/320772800/">2</a>, <a href="https://es.tradingview.com/watchlists/317651462/">3</a>); si me pegas los tickers, los incorporo. Para actualizar: “Lee el repositorio y actualiza el portal de mercados”.</p>
+  <p><b>Ediciones anteriores</b></p>
+  <ul class="ediciones" id="ediciones">
+    <li class="muted">Esta es la edición 1. Las siguientes salen de lunes a viernes a las 8:00 a. m. (Colombia) y quedan listadas aquí.</li>
+  </ul>
+  <p style="margin-top:12px"><b>Cómo se arma este diario.</b> Lo escribe una rutina automática cada día hábil: posiciones de Kubera (conectado), noticias y datos por búsqueda web con las fuentes abajo. Los precios son instantáneas de distintos momentos del día y pueden diferir del cierre. Las frases marcadas “Lectura de Claude” son interpretación, no hechos. Nada aquí es asesoría de inversión. Las listas de TradingView (<a href="https://es.tradingview.com/watchlists/321093314/">1</a>, <a href="https://es.tradingview.com/watchlists/320772800/">2</a>, <a href="https://es.tradingview.com/watchlists/317651462/">3</a>) no se pueden leer desde este entorno; si pegas los tickers en el repositorio, se incorporan.</p>
   <p style="margin-top:12px"><b>Fuentes</b></p>
   <ul>
     <li><a href="https://www.cnbc.com/2026/10/28/fed-meeting-today-live-updates.html">CNBC: decisión de la Fed, 28 oct</a></li>
@@ -400,3 +439,12 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-of
   </ul>
 </footer>
 </div>
+<script>
+(function(){
+  var KEY='portal-hide-money', btn=document.getElementById('toggle-money'), root=document.body;
+  function apply(h){ root.classList.toggle('hide-money',h); if(btn){btn.textContent=h?'Mostrar montos':'Ocultar montos';btn.setAttribute('aria-pressed',String(h));} }
+  var hidden=false; try{hidden=localStorage.getItem(KEY)==='1';}catch(e){}
+  apply(hidden);
+  if(btn) btn.addEventListener('click',function(){ hidden=!hidden; apply(hidden); try{localStorage.setItem(KEY,hidden?'1':'0');}catch(e){} });
+})();
+</script>
