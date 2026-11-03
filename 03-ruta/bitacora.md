@@ -4,6 +4,42 @@ Registro de sesiones de trabajo y decisiones, de la más reciente a la más anti
 
 ---
 
+## 2026-11-03 — Piloto 2: globo de invernaderos y modelo de capital del proyecto
+
+**Contexto que compartió Daniel:**
+- Trajo el expediente "Lote Invernaderos Llanogrande · informe de inversión" (29-oct):
+  16.507 m² de invernaderos a 960 m del Carulla del cruce, pedido de COP 11.550 millones
+  (700 mil/m²), suelo suburbano de concentración de vivienda (10 viv/ha), UMA de 2 ha no
+  cumplida, dos incógnitas de Planeación (sector de corto plazo y excepción de UMA),
+  residual de la tierra 3.500 a 6.000 millones, contra-ancla 350 a 450 mil/m².
+- Quiere un modelo para "darle play" a recibir inversionistas: que prestamistas privados
+  reemplacen la banca, en un vehículo no masivo con participaciones limitadas. Está
+  reuniendo arquitectos para el plan financiero y de viabilidad según el POT, y pregunta
+  qué habilidades hacen falta, qué vehículo permite la ley colombiana, qué compensación
+  dar a los inversionistas y qué ganamos nosotros.
+
+**Qué se hizo:**
+- `11-piloto-invernaderos-modelo-de-capital.md`: resumen del lote; por qué los préstamos
+  de muchos inversionistas son captación y solo cabe un club de máximo 20 prestamistas
+  grandes como puente; modelo principal de **participaciones preferentes a riesgo (Clase
+  A)** con prioridad en la cascada y retorno preferente objetivo del 12 % a 14 %, más
+  Clase B para gestora, socios y el dueño del lote si aporta en especie; números del
+  loteo de 9 parcelas en tres escenarios (solo hay margen con la tierra por debajo de
+  unos 300 mil/m² o aportada en especie); compensación de inversionistas y de la
+  gestora; equipo de 14 perfiles en orden (los arquitectos van después del abogado
+  urbanista, los títulos y el agua); cuatro compuertas de decisión antes de recibir un
+  peso.
+
+**Decisiones:** ninguna nueva. Recomendación de Claude: no ofertar en firme hasta la
+compuerta 0; estructurar capital como Clase A preferente, no como préstamos; proponer al
+vendedor pago parcial en participación Clase B.
+
+**Próximo paso:** concepto de norma y disponibilidad de agua en Planeación de Rionegro;
+Daniel confirma si este lote reemplaza al de 18.000 m²; Claude arma el modelo financiero
+mensual del loteo.
+
+---
+
 ## 2026-10-26 — Nueva idea: vehículo de inversión inmobiliaria (Oriente Antioqueño)
 
 **Contexto que compartió Daniel:**

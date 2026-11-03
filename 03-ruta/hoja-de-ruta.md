@@ -1,7 +1,7 @@
 # Hoja de ruta
 
 **Fase actual:** 0 — Conocernos y alinear
-**Última actualización:** 2026-10-26
+**Última actualización:** 2026-11-03
 
 Las semanas son orientativas; lo importante es cerrar cada fase antes de pasar a la
 siguiente.
@@ -74,7 +74,10 @@ entrevistas y propone ajustes a la visión.
 - [ ] Hernán y Julián validan las 7 decisiones y el term sheet; deciden el reparto del excedente
 - [ ] Daniel arma presupuesto real de opex y set-up con cotizaciones
 - [x] Informe comparativo de fiduciarias (`10-fiduciarias-comparativo.md`): ranking Aval, Alianza, Fiducentral, Progresión, Acción
-- [ ] Hernán y Julián consiguen los 5 datos del lote (uso del suelo, agua, precio, cotización de obra, comparables)
+- [x] Piloto 2: globo de invernaderos de 16.507 m² en Llanogrande, con modelo de capital preferente privado y equipo de prefactibilidad (`11-piloto-invernaderos-modelo-de-capital.md`)
+- [ ] Compuerta 0 del piloto 2: matrícula, concepto de norma (sector de corto plazo y excepción de UMA) y disponibilidad de agua
+- [ ] Compuerta 1: topografía, títulos, hidrología, esquema básico, presupuesto de urbanismo, avalúo, comparables de cierre, prefactibilidad financiera
+- [ ] Daniel confirma si el piloto 2 reemplaza o se suma al lote de 18.000 m² (`05`)
 - [ ] Plan de negocios v1 (gestora, proyecto piloto, cronograma)
 - [ ] Memorando para abogado financiero en Medellín
 - [ ] Reuniones exploratorias con Aval (equipo Fiduoccidente), Alianza Medellín y Fiducentral, con el memorando `09`
