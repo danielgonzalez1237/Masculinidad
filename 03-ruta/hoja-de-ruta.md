@@ -1,7 +1,7 @@
 # Hoja de ruta
 
 **Fase actual:** 0 — Conocernos y alinear
-**Última actualización:** 2026-11-03
+**Última actualización:** 2026-11-10
 
 Las semanas son orientativas; lo importante es cerrar cada fase antes de pasar a la
 siguiente.
@@ -79,5 +79,6 @@ entrevistas y propone ajustes a la visión.
 - [ ] Compuerta 1: topografía, títulos, hidrología, esquema básico, presupuesto de urbanismo, avalúo, comparables de cierre, prefactibilidad financiera
 - [ ] Daniel confirma si el piloto 2 reemplaza o se suma al lote de 18.000 m² (`05`)
 - [ ] Plan de negocios v1 (gestora, proyecto piloto, cronograma)
-- [ ] Memorando para abogado financiero en Medellín
+- [x] Resumen de la figura legal para el abogado (`12-figura-legal-resumen.md`)
+- [ ] Memorando para abogado financiero en Medellín (preguntas específicas; se arma con el `12` y el term sheet)
 - [ ] Reuniones exploratorias con Aval (equipo Fiduoccidente), Alianza Medellín y Fiducentral, con el memorando `09`

@@ -4,6 +4,25 @@ Registro de sesiones de trabajo y decisiones, de la más reciente a la más anti
 
 ---
 
+## 2026-11-10 — Qué figura legal usar para recibir dinero
+
+**Pregunta de Daniel:** cuál es el mejor vehículo para recibir dinero, de pocos o de
+muchos, sin meterse en problemas.
+
+**Qué se hizo:** `12-figura-legal-resumen.md`, una página para los socios y el abogado:
+la respuesta (patrimonio autónomo en fiduciaria vigilada, aporte a riesgo, oferta privada
+a menos de 100 identificados; fiducia mercantil para pocos, FIC inmobiliario con gestor
+externo para muchos), las dos normas que mandan, tabla por número de inversionistas,
+las cinco reglas que mantienen todo legal, la lista de figuras descartadas con el caso
+que las condena, y los siete pasos prácticos para el primer proyecto.
+
+**Decisiones:** ninguna nueva.
+
+**Próximo paso:** llevar el `12` y el term sheet (`08`) a un abogado financiero; seguir
+con la compuerta 0 del piloto 2.
+
+---
+
 ## 2026-11-03 — Piloto 2: globo de invernaderos y modelo de capital del proyecto
 
 **Contexto que compartió Daniel:**
