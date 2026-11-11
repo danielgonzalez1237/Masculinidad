@@ -64,6 +64,49 @@ En la etapa 0 todos los inversionistas reciben derechos fiduciarios con las clas
 definidas en el term sheet. Cuando el vehículo pase a FIC, esos derechos se migran a
 unidades, y ahí se abre la puerta al público y, más adelante, a la bolsa.
 
+## ¿Por qué no el FIC desde el día uno?
+
+Se puede. No es una prohibición legal; es una recomendación práctica, y hay un escenario
+en el que cambia.
+
+**Razones para empezar con el patrimonio autónomo**
+- **Quién lo monta.** El FIC lo constituye una fiduciaria, comisionista o administradora,
+  y ella decide si le interesa. Fiduciaria Bancolombia publica que sus fondos con gestores
+  externos son para montos superiores a 40.000 millones; las demás piden montos objetivo
+  altos y exigen historial al gestor (Fiducentral, cinco años). Con un primer proyecto de
+  8.000 a 12.000 millones y una gestora nueva, la conversación es cuesta arriba. El
+  patrimonio autónomo lo acepta casi cualquier fiduciaria.
+- **Tiempo.** Reglamento, autorización de la Superfinanciera para la familia y el primer
+  fondo, sistemas y vinculación: 4 a 9 meses (hipótesis). Una fiducia se firma en semanas
+  a tres meses. El lote no espera nueve meses.
+- **Costo.** Estructurar el FIC cuesta 150 a 400 millones y cada año pesan la valoración
+  de la unidad, el revisor fiscal, el comité de vigilancia y los reportes. Sobre un solo
+  proyecto se come el margen.
+- **Para qué sirve el FIC.** Su ventaja es recibir a más de 100 inversionistas y a público
+  desconocido. En el primer proyecto serán 20 a 50 personas de la red: se pagaría la
+  estructura grande sin usar lo que la hace grande.
+- **Un solo activo.** Un fondo está pensado como portafolio; un fondo con un lote adentro
+  es incómodo para la administradora y para el inversionista.
+
+**Lo que se pierde por no ir directo**
+- El sello de vehículo regulado desde el día uno.
+- El diferimiento tributario del FIC (art. 23-1 ET) frente a la transparencia anual de
+  la fiducia (art. 102 ET).
+- Un paso menos después. La migración es viable porque un FIC inmobiliario puede recibir
+  derechos fiduciarios de patrimonios autónomos como activo (art. 3.5.1.1.2), pero es un
+  trámite más.
+
+**Cuándo sí ir directo al FIC**
+Si en las reuniones una administradora (Aval con el equipo de Fiduoccidente, Fiducentral
+o Progresión) acepta constituir un FIC inmobiliario con monto objetivo de 10.000 a 15.000
+millones, costos razonables y plazo compatible con el lote. Es la pregunta 2 del
+memorando de fiduciarias. Variante que vale preguntar: constituir el FIC en paralelo
+mientras el primer proyecto corre en fiducia, para que el fondo nazca con ese patrimonio
+como primer activo.
+
+**Recomendación:** llevar las dos opciones a las reuniones y dejar que la respuesta de la
+fiduciaria decida. El patrimonio autónomo es el camino que no depende de nadie.
+
 ## Las cinco reglas que mantienen todo legal (en cualquiera de las figuras)
 
 1. **La plata nunca pasa por nuestra SAS.** Entra a la fiduciaria y sale de la fiduciaria.
