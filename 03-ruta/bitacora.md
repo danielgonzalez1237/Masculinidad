@@ -16,10 +16,16 @@ externo para muchos), las dos normas que mandan, tabla por número de inversioni
 las cinco reglas que mantienen todo legal, la lista de figuras descartadas con el caso
 que las condena, y los siete pasos prácticos para el primer proyecto.
 
+**2026-11-11:** Daniel pidió que el `12` quedara explicado en términos de qué recibe
+cada inversionista; se agregó la sección "derecho fiduciario o unidad de participación".
+Luego pidió una presentación para enseñar la figura legal a los socios: Claude publicó
+un deck de 11 diapositivas como artefacto de Claude (privado hasta que Daniel lo
+comparta): https://claude.ai/artifact/MYSD14prT2FG5xbmHV3keB
+
 **Decisiones:** ninguna nueva.
 
-**Próximo paso:** llevar el `12` y el term sheet (`08`) a un abogado financiero; seguir
-con la compuerta 0 del piloto 2.
+**Próximo paso:** presentar el deck a Hernán y Julián; llevar el `12` y el term sheet
+(`08`) a un abogado financiero; seguir con la compuerta 0 del piloto 2.
 
 ---
 
