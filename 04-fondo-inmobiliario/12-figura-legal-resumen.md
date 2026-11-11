@@ -36,6 +36,34 @@ Lazza Capital).
 | **Prestamistas** (si alguien insiste en prestar) | Mutuo con garantía fiduciaria sobre el lote | Fiduciaria en garantía | Interés bajo la tasa de usura | **Máximo 20 prestamistas y 50 contratos**, sin oferta a indeterminados | Contrato privado; solo como puente |
 | **Exterior** | Giro de divisas canalizado al vehículo colombiano | Intermediario cambiario + fiduciaria | Igual que el residente; inversión registrada en Banco de la República | Nunca USDT; nunca "firmar como extranjero" un residente | Automático con la declaración de cambio |
 
+## Qué recibe el inversionista: derecho fiduciario o unidad de participación
+
+En la tabla anterior aparecen dos títulos distintos. No es que quien pone más reciba
+algo mejor: cada vehículo entrega el suyo.
+
+- **Derecho fiduciario** (fiducia mercantil): una participación en ese patrimonio
+  autónomo concreto, documentada en el contrato de fiducia. No es un valor; no se
+  negocia en bolsa; se cede en privado con autorización de la fiduciaria. Vale lo que
+  digan el avalúo y la rendición de cuentas del patrimonio.
+- **Unidad de participación** (FIC o FCP): el patrimonio del fondo se divide en partes
+  iguales llamadas unidades, el equivalente a una acción pero en un fondo. La
+  administradora calcula su valor periódicamente con el valor de los activos; quedan
+  anotadas a nombre del inversionista en Deceval; pueden inscribirse en el registro de
+  valores y negociarse en la BVC. En el FCP la ley exige un mínimo de 600 salarios
+  mínimos por inversionista (unos 1.050 millones en 2026); en el FIC no hay mínimo legal.
+
+| | Derecho fiduciario | Unidad de participación |
+|---|---|---|
+| Vehículo | Fiducia mercantil (etapa 0) | FIC inmobiliario o FCP (etapa 1 en adelante) |
+| Liquidez | Cesión privada con aprobación de la fiduciaria | Ventanas de redención; listado en bolsa cuando el fondo se inscriba |
+| Valoración | Avalúo y rendición de cuentas | Valor de unidad publicado por la administradora con reglas de la Superfinanciera |
+| Escala | Menos de 100 destinatarios identificados | Cientos o miles de inversionistas bajo oferta regulada |
+| Impuestos | Transparencia: el inversionista tributa cada año como si tuviera los activos (art. 102 ET) | Diferimiento hasta la distribución o redención (art. 23-1 ET) |
+
+En la etapa 0 todos los inversionistas reciben derechos fiduciarios con las clases A y B
+definidas en el term sheet. Cuando el vehículo pase a FIC, esos derechos se migran a
+unidades, y ahí se abre la puerta al público y, más adelante, a la bolsa.
+
 ## Las cinco reglas que mantienen todo legal (en cualquiera de las figuras)
 
 1. **La plata nunca pasa por nuestra SAS.** Entra a la fiduciaria y sale de la fiduciaria.
